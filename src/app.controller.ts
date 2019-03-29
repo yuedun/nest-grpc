@@ -6,23 +6,23 @@ import { AppService } from './app.service';
 export class AppController {
 	constructor(private readonly appService: AppService) { }
 
-	@GrpcMethod('Greeter', 'sayHello')
-	SayHello(data: HelloRequest, metadata: any): HelloReply {
+	@GrpcMethod('Greeter')
+	sayHello(data: HelloRequest, metadata: any): HelloReply {
 		console.log(data);
-		let d = this.appService.getHello();
+		const d = this.appService.getHello();
 		console.log(d);
-		
-		return { message: ">>>>>>>>>>>>>hello:" + data.name }
+
+		return { message: '>>>>>>>>>>>>>hello:' + data.name };
 	}
-	@GrpcMethod('Greeter', 'sayHello2')
-	SayHello2(data: HelloRequest, metadata: any): HelloReply {
+	@GrpcMethod('Greeter')
+	sayHello2(data: HelloRequest, metadata: any): HelloReply {
 		console.log(data);
-		return { message: ">>>>>>>>>>>>>hello:" + data.name }
+		return { message: '>>>>>>>>>>>>>hello:' + data.name };
 	}
-	@GrpcMethod('Greeter', 'sayHello3')
-	SayHello3(data: HelloRequest, metadata: any): HelloReply {
+	@GrpcMethod('Greeter')
+	sayHello3(data: HelloRequest, metadata: any): HelloReply {
 		console.log(data);
-		return { message: ">>>>>>>>>>>>>hello:" + data.name }
+		return { message: '>>>>>>>>>>>>>hello:' + data.name };
 	}
 }
 
