@@ -9,13 +9,13 @@ async function bootstrap() {
 	const app = await NestFactory.createMicroservice(AppModule, {
 		transport: Transport.GRPC,
 		options: {
-			url: 'localhost:50051',
+			url: 'www.yuedun.wang:50051',
 			package: 'helloworld',
 			protoPath: join(__dirname, 'hero/hero.proto'),
 			credentials: ServerCredentials.createSsl(fs.readFileSync(__dirname + '/keys/ssl.crt'), [{
 				cert_chain: fs.readFileSync(__dirname + '/keys/ssl.crt'),
 				private_key: fs.readFileSync(__dirname + '/keys/ssl.key'),
-			}], true),
+			}], false),
 		},
 	});
 	await app.listenAsync();
