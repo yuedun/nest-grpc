@@ -6,7 +6,7 @@ package payment;
 service PaymentService {
   // Sends a greeting
   rpc SayHello (HelloRequest) returns (HelloReply) {}
-  rpc getNewStudentPayments (StuPaymentsReq) returns (StuPaymentsRes) {}
+  rpc GetNewStudentPayments (StuPaymentsReq) returns (StuPaymentsRes) {}
 }
 
 // The request message containing the user's name.

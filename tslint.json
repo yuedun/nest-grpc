@@ -1,5 +1,5 @@
 {
-  "defaultSeverity": "error",
+  "defaultSeverity": "warn",
   "extends": ["tslint:recommended"],
   "jsRules": {
     "no-unused-expression": true
@@ -7,8 +7,8 @@
   "rules": {
     "quotemark": [true, "single"],
     "member-access": [false],
-    "ordered-imports": [false],
-    "max-line-length": [true, 150],
+    "ordered-imports": [true],
+    "max-line-length": [true, 500],
     "member-ordering": [false],
     "interface-name": [false],
     "arrow-parens": false,

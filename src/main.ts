@@ -1,9 +1,9 @@
-import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
 import { Transport } from '@nestjs/common/enums/transport.enum';
-import { join } from 'path';
+import { NestFactory } from '@nestjs/core';
 import * as fs from 'fs';
 import { ServerCredentials } from 'grpc';
+import { join } from 'path';
+import { AppModule } from './app.module';
 
 async function bootstrap() {
 	const app = await NestFactory.createMicroservice(AppModule, {

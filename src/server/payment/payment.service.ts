@@ -1,7 +1,7 @@
-import { Injectable, Inject } from "@nestjs/common";
-import { Sequelize } from "sequelize";
-import { map, any } from "bluebird";
-import { QueryTypes } from "sequelize";
+import { Inject, Injectable } from '@nestjs/common';
+import { any, map } from 'bluebird';
+import { Sequelize } from 'sequelize';
+import { QueryTypes } from 'sequelize';
 
 @Injectable()
 export class PaymentService {
@@ -12,22 +12,21 @@ export class PaymentService {
 
     async hello(): Promise<any> {
         return new Promise((resolve, reject) => {
-            resolve("hello world");
-        })
+            resolve('hello world');
+        });
     }
     async getNewStudentPayments({
         userId,
         pageNo = 1,
-        pageSize = 10
+        pageSize = 10,
     }: {
         userId: number,
         pageNo?: number;
         pageSize?: number;
     }): Promise<any> {
 
-
         const sql = `SELECT * FROM user WHERE id=:userId`;
 
-        return Promise.resolve(this.sequelize.query(sql, { replacements: { userId }, type: QueryTypes.SELECT }))
+        return Promise.resolve(this.sequelize.query(sql, { replacements: { userId }, type: QueryTypes.SELECT }));
     }
 }

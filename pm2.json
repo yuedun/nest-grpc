@@ -1,0 +1,15 @@
+{
+    "apps": [
+      {
+        "name": "nest-grpc",
+        "script": "dist/main.js",
+        "merge_logs": true,
+        "log_date_format": "HH:mm:ss",
+        "instances": "3",
+        "max_memory_restart": "1500M",
+        "exec_mode": "cluster",
+        "out_file": "/data/nest_grpc_out.log",
+        "error_file": "/data/nest_grpc_error.log"
+      }
+    ]
+  }

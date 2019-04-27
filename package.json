@@ -1,8 +1,8 @@
 {
   "name": "nest-grpc",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "使用nestjs框架开发的grpc服务",
+  "author": "huopanpan",
   "license": "MIT",
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
@@ -26,11 +26,12 @@
     "@nestjs/microservices": "^6.1.1",
     "@nestjs/platform-express": "^6.1.1",
     "grpc": "^1.20.0",
+    "moment": "^2.24.0",
     "mysql2": "^1.6.5",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
     "rxjs": "^6.5.1",
-    "sequelize": "^5.7.5",
+    "sequelize": "^5.7.6",
     "sequelize-typescript": "^1.0.0-beta.2"
   },
   "devDependencies": {
